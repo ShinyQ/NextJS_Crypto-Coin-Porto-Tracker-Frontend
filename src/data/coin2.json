@@ -4,34 +4,41 @@
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
         "coin_total":  0.0812,
-        "coin_endpoint": "https://api.diadata.org/v1/assetQuotation/Bitcoin/0x0000000000000000000000000000000000000000"
+        "coin_slug": "BTC"
     },
     {
         "id": 2,
         "name": "Ethereum",
         "img": "https://th.bing.com/th/id/OIP.Hfv17gmiIFkSqmIM9_3p-QHaIX?rs=1&pid=ImgDetMain",
         "coin_total": 0.30618587,
-        "coin_endpoint": "https://api.diadata.org/v1/assetQuotation/Ethereum/0x0000000000000000000000000000000000000000"
+        "coin_slug": "ETH"
     },
     {
         "id": 3,
         "name": "Manta",
         "img": "https://seeklogo.com/images/M/manta-network-manta-logo-D595CAF1F9-seeklogo.com.png",
         "coin_total": 46.752438,
-        "coin_endpoint": "https://api.diadata.org/v1/assetQuotation/Ethereum/0xcf0C122c6b73ff809C693DB761e7BaeBe62b6a2E"
+        "coin_slug": "MANTA"
     },
     {
         "id": 3,
         "name": "Matic",
         "img": "https://content.diadata.org/images/assets-icons/3890.png",
         "coin_total": 635.21564950,
-        "coin_endpoint": "https://api.diadata.org/v1/assetQuotation/Polygon/0x0000000000000000000000000000000000001010"
+        "coin_slug": "MATIC"
     },
     {
         "id": 4,
         "name": "Floki",
         "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
         "coin_total": 764906.1,
-        "coin_endpoint": "https://api.diadata.org/v1/assetQuotation/Ethereum/0xcf0C122c6b73ff809C693DB761e7BaeBe62b6a2E"
+        "coin_slug": "FLOKI"
+    },
+    {
+        "id": 5,
+        "name": "Aether",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/17605.png",
+        "coin_total": 1177.29039,
+        "coin_slug": "AEG"
     }
 ]
