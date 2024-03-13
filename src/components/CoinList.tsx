@@ -1,11 +1,14 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { formatToRupiah, formatToDollar } from "@/utils/common";
+import { formatToRupiah, formatToDollar, calculateROI } from "@/utils/common";
 import { fetchCoinData } from "@/service/api/marketCapService";
 import { Coin, MarketCapData } from "@/types/coin";
 
-const CoinList: React.FC<{ data: Coin[] }> = ({ data }) => {
+const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
+  data,
+  startPortofolio,
+}) => {
   const [coinData, setCoinData] = useState<(Coin & MarketCapData)[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -54,13 +57,31 @@ const CoinList: React.FC<{ data: Coin[] }> = ({ data }) => {
     return acc + value;
   }, 0);
 
+  const totalROI = calculateROI(startPortofolio, totalPortofolio);
+
   return (
     <div className="pb-5">
       <p className="text-base">
-        Total Nilai Portofolio: {formatToRupiah(totalPortofolio)}
+        Modal Investasi: {formatToRupiah(startPortofolio)}
       </p>
+      <p className="text-base mb-5">
+        Persentase Keseluruhan: &nbsp;
+        <span
+          className="font-bold"
+          style={{
+            color: parseFloat(totalROI) >= 0 ? "green" : "red",
+          }}
+        >
+          {totalROI}%
+        </span>
+      </p>
+
       <p className="text-base">
-        Total Persentase Hari Ini: &nbsp;
+        Portofolio Saat Ini: {formatToRupiah(totalPortofolio)}
+      </p>
+
+      <p className="text-base">
+        Persentase Hari Ini: &nbsp;
         <span
           className="font-bold"
           style={{

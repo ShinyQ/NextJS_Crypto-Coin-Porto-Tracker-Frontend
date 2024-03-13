@@ -13,3 +13,7 @@ export function formatToDollar(number) {
     maximumFractionDigits: 6,
   }).format(number)
 }
+
+export function calculateROI(startPortofolio, totalPortofolio) {
+  return (((totalPortofolio - startPortofolio) / startPortofolio) * 100).toFixed(2);
+}
