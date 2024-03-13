@@ -118,7 +118,7 @@ const CoinList: React.FC<{ data: Coin[] }> = ({ data }) => {
                     color: coin.Price > coin.PriceYesterday ? "green" : "red",
                   }}
                 >
-                  {coin.Price > coin.PriceYesterday ? "+" : "-"}
+                  {coin.Price > coin.PriceYesterday ? "+" : ""}
                   {(
                     ((coin.Price - coin.PriceYesterday) / coin.PriceYesterday) *
                     100
