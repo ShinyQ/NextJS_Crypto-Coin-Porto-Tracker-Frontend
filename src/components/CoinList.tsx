@@ -101,7 +101,9 @@ const CoinList: React.FC<{ data: Coin[] }> = ({ data }) => {
                   Nilai Jual:
                 </p>
                 <p className="text-gray-700 text-base font-bold">
-                  {coin.Price && data[index].coin_total
+                  {data[index].name === "Manta"
+                    ? formatToRupiah(3.8 * data[index].coin_total * 15600)
+                    : coin.Price && data[index].coin_total
                     ? formatToRupiah(
                         coin.Price * data[index].coin_total * 15600
                       )
