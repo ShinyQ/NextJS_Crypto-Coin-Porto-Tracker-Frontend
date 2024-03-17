@@ -1,7 +1,13 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { formatToRupiah, formatToDollar, calculateROI } from "@/utils/common";
+import {
+  formatToRupiah,
+  formatToDollar,
+  calculateROI,
+  calculateTotalReturn,
+  calculateTotalPortfolio,
+} from "@/utils/common";
 import { fetchCoinData } from "@/service/api/marketCapService";
 import { Coin, MarketCapData } from "@/types/coin";
 
@@ -16,7 +22,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const symbols = "BTC,ETH,MANTA,MATIC,FLOKI,AEG,SHIB";
+        const symbols = "BTC,ETH,MANTA,MATIC,FLOKI,SHIB";
         const MarketCapData = await fetchCoinData(symbols);
 
         const combinedData = data.map((coin) => {
@@ -40,31 +46,18 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
     fetchData();
   }, [data]);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+  const totalPortofolio = calculateTotalPortfolio(coinData, data);
+  const totalReturn = calculateTotalReturn(coinData);
 
-  const totalReturn = coinData
-    .reduce((acc, coin) => acc + (coin.quote?.USD?.percent_change_24h ?? 0), 0)
-    .toFixed(2);
-
-  const totalPortofolio = coinData.reduce((acc, coin, index) => {
-    const price = coin.quote?.USD?.price;
-    const value = price * data[index].coin_total * 15600;
-    return acc + value;
-  }, 0);
-
-  const totalROI = calculateROI(startPortofolio, totalPortofolio);
   return (
     <div className="p-2 mx-5">
       <div className="text-center">
         <p>Modal Investasi: {formatToRupiah(startPortofolio)}</p>
         <p>
-          Total Keuntungan: &nbsp;
+          Total Keuntungan:{" "}
           <span
             className="font-bold"
             style={{
@@ -75,31 +68,31 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
           </span>
         </p>
         <p className="mb-5">
-          Persentase Keseluruhan: &nbsp;
+          Persentase Keseluruhan:{" "}
           <span
             className="font-bold"
             style={{
-              color: parseFloat(totalROI) >= 0 ? "green" : "red",
+              color:
+                parseFloat(calculateROI(startPortofolio, totalPortofolio)) >= 0
+                  ? "green"
+                  : "red",
             }}
           >
-            {totalROI}%
+            {calculateROI(startPortofolio, totalPortofolio)}%
           </span>
         </p>
-
         <p>Portofolio Saat Ini: {formatToRupiah(totalPortofolio)}</p>
-
         <p>
-          Total Persentase Hari Ini: &nbsp;
+          Total Persentase Hari Ini:{" "}
           <span
             className="font-bold"
-            style={{
-              color: parseFloat(totalReturn) >= 0 ? "green" : "red",
-            }}
+            style={{ color: parseFloat(totalReturn) >= 0 ? "green" : "red" }}
           >
             {totalReturn}%
           </span>
         </p>
       </div>
+
       <div className="flex flex-wrap justify-between p-5 lg:ml-20 lg:mr-20 mb-5">
         {coinData.map((coin, index) => (
           <div key={coin.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-5">
@@ -118,11 +111,9 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                 <p className="text-gray-700 text-base">
                   Jumlah Koin: {data[index].coin_total}
                 </p>
-
                 <p className="text-gray-700 text-base">
                   Harga Saat Ini: {formatToDollar(coin.quote?.USD?.price)}
                 </p>
-
                 <p className="text-gray-700 text-base mt-5 font-bold">
                   Nilai Jual (Rp):
                 </p>
