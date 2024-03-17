@@ -60,43 +60,40 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   const totalROI = calculateROI(startPortofolio, totalPortofolio);
 
   return (
-    <div className="pb-5">
-      <p className="text-base">
-        Modal Investasi: {formatToRupiah(startPortofolio)}
-      </p>
-      <p className="text-base mb-5">
-        Persentase Keseluruhan: &nbsp;
-        <span
-          className="font-bold"
-          style={{
-            color: parseFloat(totalROI) >= 0 ? "green" : "red",
-          }}
-        >
-          {totalROI}%
-        </span>
-      </p>
+    <div className="p-5 mx-5">
+      <div className="mb-4 text-center">
+        <p>Modal Investasi: {formatToRupiah(startPortofolio)}</p>
+        <p className="mb-5">
+          Persentase Keseluruhan: &nbsp;
+          <span
+            className="font-bold"
+            style={{
+              color: parseFloat(totalROI) >= 0 ? "green" : "red",
+            }}
+          >
+            {totalROI}%
+          </span>
+        </p>
 
-      <p className="text-base">
-        Portofolio Saat Ini: {formatToRupiah(totalPortofolio)}
-      </p>
+        <p>Portofolio Saat Ini: {formatToRupiah(totalPortofolio)}</p>
 
-      <p className="text-base">
-        Persentase Hari Ini: &nbsp;
-        <span
-          className="font-bold"
-          style={{
-            color: parseFloat(totalReturn) >= 0 ? "green" : "red",
-          }}
-        >
-          {totalReturn}%
-        </span>
-      </p>
-
-      {coinData.map((coin, index) => (
-        <div key={coin.id} className="mt-5 mb-5">
-          <div className="max-w-sm w-full lg:max-w-full lg:flex">
-            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-              <div className="">
+        <p>
+          Persentase Hari Ini: &nbsp;
+          <span
+            className="font-bold"
+            style={{
+              color: parseFloat(totalReturn) >= 0 ? "green" : "red",
+            }}
+          >
+            {totalReturn}%
+          </span>
+        </p>
+      </div>
+      <div className="flex flex-wrap justify-between">
+        {coinData.map((coin, index) => (
+          <div key={coin.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-5">
+            <div className="border border-gray-400 bg-white rounded-lg p-4 flex flex-col justify-between leading-normal">
+              <div className="mb-4">
                 <div className="flex items-center mb-3">
                   <img
                     className="w-10 h-10 rounded-full mr-4"
@@ -143,8 +140,8 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
