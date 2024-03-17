@@ -16,12 +16,13 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const symbols = "BTC,ETH,MANTA,MATIC,FLOKI,AEG";
-        const MarketCapData = await fetchCoinData(symbols); // Call the service
+        const symbols = "BTC,ETH,MANTA,MATIC,FLOKI,AEG,SHIB";
+        const MarketCapData = await fetchCoinData(symbols);
 
         const combinedData = data.map((coin) => {
           const coinDataArray = MarketCapData[coin.coin_slug.toUpperCase()];
           const coinData = coinDataArray ? coinDataArray[0] : null;
+
           return {
             ...coin,
             ...(coinData || {}),
@@ -58,11 +59,21 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   }, 0);
 
   const totalROI = calculateROI(startPortofolio, totalPortofolio);
-
   return (
-    <div className="p-5 mx-5">
-      <div className="mb-4 text-center">
+    <div className="p-2 mx-5">
+      <div className="text-center">
         <p>Modal Investasi: {formatToRupiah(startPortofolio)}</p>
+        <p>
+          Total Keuntungan: &nbsp;
+          <span
+            className="font-bold"
+            style={{
+              color: totalPortofolio - startPortofolio >= 0 ? "green" : "red",
+            }}
+          >
+            {formatToRupiah(totalPortofolio - startPortofolio)}
+          </span>
+        </p>
         <p className="mb-5">
           Persentase Keseluruhan: &nbsp;
           <span
@@ -78,7 +89,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
         <p>Portofolio Saat Ini: {formatToRupiah(totalPortofolio)}</p>
 
         <p>
-          Persentase Hari Ini: &nbsp;
+          Total Persentase Hari Ini: &nbsp;
           <span
             className="font-bold"
             style={{
@@ -89,7 +100,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
           </span>
         </p>
       </div>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between p-5 lg:ml-20 lg:mr-20 mb-5">
         {coinData.map((coin, index) => (
           <div key={coin.id} className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-5">
             <div className="border border-gray-400 bg-white rounded-lg p-4 flex flex-col justify-between leading-normal">
@@ -123,7 +134,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                     : "Data not available"}
                 </p>
                 <p className="text-gray-700 text-base font-bold mt-3">
-                  Persentase Kenaikan: <br />
+                  Persentase Hari Ini: <br />
                 </p>
                 <p
                   className="text-gray-700 text-base font-bold"

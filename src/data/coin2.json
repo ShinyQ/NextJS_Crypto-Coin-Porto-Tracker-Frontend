@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.0912,
+        "coin_total":  0.0812,
         "coin_slug": "BTC"
     },
     {
@@ -36,9 +36,9 @@
     },
     {
         "id": 5,
-        "name": "Aether",
-        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/17605.png",
-        "coin_total": 1177.29039,
-        "coin_slug": "AEG"
+        "name": "Shiba Inu",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png",
+        "coin_total": 6975484.1898,
+        "coin_slug": "SHIB"
     }
 ]
