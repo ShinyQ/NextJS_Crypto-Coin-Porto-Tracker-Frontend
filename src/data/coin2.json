@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.0812,
+        "coin_total":  0.083337,
         "coin_slug": "BTC"
     },
     {
@@ -31,7 +31,7 @@
         "id": 4,
         "name": "Floki",
         "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
-        "coin_total": 764906.1,
+        "coin_total": 961910.46,
         "coin_slug": "FLOKI"
     },
     {
