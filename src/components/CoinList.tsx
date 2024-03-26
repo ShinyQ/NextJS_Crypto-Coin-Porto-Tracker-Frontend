@@ -22,7 +22,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const symbols = "BTC,ETH,MANTA,MATIC,FLOKI,SHIB";
+        const symbols = data.map((item) => item.coin_slug).join(",");
         const MarketCapData = await fetchCoinData(symbols);
 
         const combinedData = data.map((coin) => {

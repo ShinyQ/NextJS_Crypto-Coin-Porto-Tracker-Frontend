@@ -3,42 +3,49 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.083337,
+        "coin_total":  0.08347246,
         "coin_slug": "BTC"
     },
     {
         "id": 2,
         "name": "Ethereum",
         "img": "https://th.bing.com/th/id/OIP.Hfv17gmiIFkSqmIM9_3p-QHaIX?rs=1&pid=ImgDetMain",
-        "coin_total": 0.30618587,
+        "coin_total": 0.30717922,
         "coin_slug": "ETH"
     },
     {
         "id": 3,
         "name": "Manta",
         "img": "https://seeklogo.com/images/M/manta-network-manta-logo-D595CAF1F9-seeklogo.com.png",
-        "coin_total": 46.752438,
+        "coin_total": 48.882438,
         "coin_slug": "MANTA"
     },
     {
         "id": 3,
         "name": "Matic",
         "img": "https://content.diadata.org/images/assets-icons/3890.png",
-        "coin_total": 635.21564950,
+        "coin_total": 635.7273,
         "coin_slug": "MATIC"
     },
     {
         "id": 4,
         "name": "Floki",
         "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
-        "coin_total": 961910.46,
+        "coin_total": 1158914.82,
         "coin_slug": "FLOKI"
     },
     {
         "id": 5,
-        "name": "Shiba Inu",
-        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png",
-        "coin_total": 6975484.1898,
-        "coin_slug": "SHIB"
+        "name": "APU",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/30008.png",
+        "coin_total": 2173445,
+        "coin_slug": "APU"
+    },
+    {
+        "id": 6,
+        "name": "TOKENFI",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
+        "coin_total": 290,
+        "coin_slug": "TOKEN"
     }
 ]
