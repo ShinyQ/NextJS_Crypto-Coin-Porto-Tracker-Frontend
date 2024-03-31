@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React, { useEffect, useState } from "react";
 import {
   formatToRupiah,
@@ -18,6 +17,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   const [coinData, setCoinData] = useState<(Coin & MarketCapData)[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [showValue, setShowValue] = useState<boolean>(true); // State to manage visibility
 
   useEffect(() => {
     const fetchData = async () => {
@@ -91,6 +91,10 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
             {totalReturn}%
           </span>
         </p>
+
+        <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded mt-3" onClick={() => setShowValue(!showValue)}>
+          {showValue ? "Hide Values" : "Show Values"}
+        </button>
       </div>
 
       <div className="flex flex-wrap justify-between p-5 lg:ml-20 lg:mr-20 mb-5">
@@ -108,22 +112,32 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                     {data[index].name}
                   </div>
                 </div>
-                <p className="text-gray-700 text-base">
-                  Jumlah Koin: {data[index].coin_total}
-                </p>
+                {/* Hide Jumlah Koin based on showValue state */}
+                {showValue ? (
+                  <p className="text-gray-700 text-base">
+                    Jumlah Koin: {data[index].coin_total}
+                  </p>
+                ) : (
+                  <p className="text-gray-700 text-base">Jumlah Koin: ***</p>
+                )}
                 <p className="text-gray-700 text-base">
                   Harga Saat Ini: {formatToDollar(coin.quote?.USD?.price)}
                 </p>
-                <p className="text-gray-700 text-base mt-5 font-bold">
-                  Nilai Jual (Rp):
-                </p>
-                <p className="text-gray-700 text-base">
-                  {coin.quote?.USD?.price && data[index].coin_total
-                    ? formatToRupiah(
-                        coin.quote?.USD?.price * data[index].coin_total * 15600
-                      )
-                    : "Data not available"}
-                </p>
+                {/* Toggle visibility based on showValue state */}
+                {showValue ? (
+                  <p className="text-gray-700 text-base mt-5 font-bold">
+                    Nilai Jual (Rp):{" "}
+                    {coin.quote?.USD?.price && data[index].coin_total
+                      ? formatToRupiah(
+                          coin.quote?.USD?.price * data[index].coin_total * 15600
+                        )
+                      : "Data not available"}
+                  </p>
+                ) : (
+                  <p className="text-gray-700 text-base mt-5 font-bold">
+                    Nilai Jual (Rp): ***
+                  </p>
+                )}
                 <p className="text-gray-700 text-base font-bold mt-3">
                   Persentase Hari Ini: <br />
                 </p>

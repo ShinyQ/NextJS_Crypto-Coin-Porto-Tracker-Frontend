@@ -45,7 +45,7 @@
         "id": 6,
         "name": "TOKENFI",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
-        "coin_total": 1355.324639,
+        "coin_total": 1357.324639,
         "coin_slug": "TOKEN"
     },
     {
@@ -59,7 +59,7 @@
         "id": 8,
         "name": "Bitget Token",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/11092.png",
-        "coin_total": 11,
+        "coin_total": 50,
         "coin_slug": "BGB"
     }
 ]
