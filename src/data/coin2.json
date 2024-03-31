@@ -24,7 +24,7 @@
         "id": 3,
         "name": "Matic",
         "img": "https://content.diadata.org/images/assets-icons/3890.png",
-        "coin_total": 635.7273,
+        "coin_total": 400.72831,
         "coin_slug": "MATIC"
     },
     {
@@ -47,5 +47,19 @@
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
         "coin_total": 1355.324639,
         "coin_slug": "TOKEN"
+    },
+    {
+        "id": 7,
+        "name": " Polytrade",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/10465.png",
+        "coin_total": 82.6885,
+        "coin_slug": "TRADE"
+    },
+    {
+        "id": 8,
+        "name": "Bitget Token",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/11092.png",
+        "coin_total": 11,
+        "coin_slug": "BGB"
     }
 ]
