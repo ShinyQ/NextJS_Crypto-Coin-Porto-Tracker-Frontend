@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.08347246,
+        "coin_total":  0.08438446,
         "coin_slug": "BTC"
     },
     {
@@ -45,7 +45,7 @@
         "id": 6,
         "name": "TOKENFI",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
-        "coin_total": 1357.324639,
+        "coin_total": 1360.324639,
         "coin_slug": "TOKEN"
     },
     {
