@@ -33,3 +33,13 @@ export function calculateTotalPortfolio(coinData: (Coin & MarketCapData)[], data
     return acc + value;
   }, 0);
 }
+
+
+export function formatTotalCoin(totalCoin: number){
+  const formattedNumber = totalCoin.toLocaleString('de-DE', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 10
+  });
+
+  return formattedNumber
+}

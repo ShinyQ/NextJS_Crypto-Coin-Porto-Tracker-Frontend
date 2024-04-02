@@ -6,6 +6,7 @@ import {
   calculateROI,
   calculateTotalReturn,
   calculateTotalPortfolio,
+  formatTotalCoin,
 } from "@/utils/common";
 import { fetchCoinData } from "@/service/api/marketCapService";
 import { Coin, MarketCapData } from "@/types/coin";
@@ -115,7 +116,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                 {/* Hide Jumlah Koin based on showValue state */}
                 {showValue ? (
                   <p className="text-gray-700 text-base">
-                    Jumlah Koin: {data[index].coin_total}
+                    Jumlah Koin: {formatTotalCoin(data[index].coin_total)}
                   </p>
                 ) : (
                   <p className="text-gray-700 text-base">Jumlah Koin: ***</p>
