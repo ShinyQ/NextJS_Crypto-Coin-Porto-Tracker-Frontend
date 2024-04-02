@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useEffect, useState } from "react";
 import {
   formatToRupiah,
@@ -18,7 +19,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   const [coinData, setCoinData] = useState<(Coin & MarketCapData)[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showValue, setShowValue] = useState<boolean>(true); // State to manage visibility
+  const [showValue, setShowValue] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,10 +31,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
           const coinDataArray = MarketCapData[coin.coin_slug.toUpperCase()];
           const coinData = coinDataArray ? coinDataArray[0] : null;
 
-          return {
-            ...coin,
-            ...(coinData || {}),
-          } as Coin & MarketCapData;
+          return { ...coin, ...(coinData || {}) } as Coin & MarketCapData;
         });
 
         setCoinData(combinedData);
@@ -52,6 +50,15 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
 
   const totalPortofolio = calculateTotalPortfolio(coinData, data);
   const totalReturn = calculateTotalReturn(coinData);
+
+  const formatCoinValue = (coin: MarketCapData, index: number) => {
+    const value = coin.quote?.USD?.price * data[index].coin_total * 15600;
+    return value ? formatToRupiah(value) : "Data not available";
+  };
+
+  const renderValue = (value: string | number, condition: boolean) => {
+    return showValue ? value : "***";
+  };
 
   return (
     <div className="p-2 mx-5">
@@ -92,8 +99,10 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
             {totalReturn}%
           </span>
         </p>
-
-        <button className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded mt-3" onClick={() => setShowValue(!showValue)}>
+        <button
+          className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded mt-3"
+          onClick={() => setShowValue(!showValue)}
+        >
           {showValue ? "Hide Values" : "Show Values"}
         </button>
       </div>
@@ -113,32 +122,20 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                     {data[index].name}
                   </div>
                 </div>
-                {/* Hide Jumlah Koin based on showValue state */}
-                {showValue ? (
-                  <p className="text-gray-700 text-base">
-                    Jumlah Koin: {formatTotalCoin(data[index].coin_total)}
-                  </p>
-                ) : (
-                  <p className="text-gray-700 text-base">Jumlah Koin: ***</p>
-                )}
+                <p className="text-gray-700 text-base">
+                  Jumlah Koin:{" "}
+                  {renderValue(
+                    formatTotalCoin(data[index].coin_total),
+                    showValue
+                  )}
+                </p>
                 <p className="text-gray-700 text-base">
                   Harga Saat Ini: {formatToDollar(coin.quote?.USD?.price)}
                 </p>
-                {/* Toggle visibility based on showValue state */}
-                {showValue ? (
-                  <p className="text-gray-700 text-base mt-5 font-bold">
-                    Nilai Jual (Rp):{" "}
-                    {coin.quote?.USD?.price && data[index].coin_total
-                      ? formatToRupiah(
-                          coin.quote?.USD?.price * data[index].coin_total * 15600
-                        )
-                      : "Data not available"}
-                  </p>
-                ) : (
-                  <p className="text-gray-700 text-base mt-5 font-bold">
-                    Nilai Jual (Rp): ***
-                  </p>
-                )}
+                <p className="text-gray-700 text-base mt-5 font-bold">
+                  Nilai Jual (Rp):{" "}
+                  {renderValue(formatCoinValue(coin, index), showValue)}
+                </p>
                 <p className="text-gray-700 text-base font-bold mt-3">
                   Persentase Hari Ini: <br />
                 </p>
