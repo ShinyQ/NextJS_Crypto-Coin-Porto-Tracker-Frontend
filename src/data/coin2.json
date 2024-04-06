@@ -36,20 +36,13 @@
     },
     {
         "id": 6,
-        "name": " Polytrade",
-        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/10465.png",
-        "coin_total": 82.6885,
-        "coin_slug": "TRADE"
-    },
-    {
-        "id": 7,
         "name": "TOKENFI",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
         "coin_total": 1360.324639,
         "coin_slug": "TOKEN"
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Manta",
         "img": "https://seeklogo.com/images/M/manta-network-manta-logo-D595CAF1F9-seeklogo.com.png",
         "coin_total": 54.042438,
