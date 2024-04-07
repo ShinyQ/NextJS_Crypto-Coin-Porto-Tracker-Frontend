@@ -29,7 +29,7 @@ export function calculateTotalReturn(coinData: (Coin & MarketCapData)[]): string
 export function calculateTotalPortfolio(coinData: (Coin & MarketCapData)[], data: Coin[]): number {
   return coinData.reduce((acc, coin, index) => {
     const price = coin.quote?.USD?.price ?? 0;
-    const value = price * (data[index]?.coin_total ?? 0) * 15600;
+    const value = price * (data[index]?.coin_total ?? 0) * 15800;
     return acc + value;
   }, 0);
 }
