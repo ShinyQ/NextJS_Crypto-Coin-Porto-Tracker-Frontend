@@ -65,9 +65,6 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
     return returnB - returnA;
   });
 
-  console.log(sortedCoins);
-
-
   const renderValue = (value: string | number, condition: boolean) => {
     return showValue ? value : "***";
   };
@@ -118,10 +115,10 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
           </span>
         </p>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white py-1 px-3 rounded mt-3"
+          className="bg-orange-500 hover:bg-orange  -700 text-white py-1 px-3 rounded mt-3"
           onClick={() => setShowValue(!showValue)}
         >
-          {showValue ? "😣" : "👀"}
+          {showValue ? "👀" : "😣"}
         </button>
       </div>
 
