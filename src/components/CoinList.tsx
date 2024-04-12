@@ -11,6 +11,7 @@ import {
 } from "@/utils/common";
 import { fetchCoinData } from "@/service/api/marketCapService";
 import { Coin, MarketCapData } from "@/types/coin";
+import { RUPIAH_AMOUNT } from "@/utils/constant";
 
 const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   data,
@@ -55,13 +56,13 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   const totalReturn = calculateTotalReturn(coinData);
 
   const formatCoinValue = (coin: MarketCapData, index: number) => {
-    const value = coin.quote?.USD?.price * data[index].coin_total * 16000;
+    const value = coin.quote?.USD?.price * data[index].coin_total * RUPIAH_AMOUNT;
     return value ? formatToRupiah(value) : "Data not available";
   };
 
   const sortedCoins = [...coinData].sort((a, b) => {
-    const returnA = a.quote?.USD?.price * data[coinData.indexOf(a)].coin_total * 16000 || 0;
-    const returnB = b.quote?.USD?.price * data[coinData.indexOf(b)].coin_total * 16000 || 0;
+    const returnA = a.quote?.USD?.price * data[coinData.indexOf(a)].coin_total * RUPIAH_AMOUNT || 0;
+    const returnB = b.quote?.USD?.price * data[coinData.indexOf(b)].coin_total * RUPIAH_AMOUNT || 0;
     return returnB - returnA;
   });
 
@@ -129,7 +130,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
               <div className="mb-4">
                 <div className="flex items-center mb-3">
                 <div className="mr-3 flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 text-gray-900 font-bold text-xl mb-2 mt-2">
-                    {index + 1}.
+                    {index + 1}
                   </div>
                   <img
                     className="w-10 h-10 rounded-full mr-4"
