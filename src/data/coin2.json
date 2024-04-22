@@ -15,27 +15,20 @@
     },
     {
         "id": 3,
-        "name": "Ethereum",
-        "img": "https://th.bing.com/th/id/OIP.Hfv17gmiIFkSqmIM9_3p-QHaIX?rs=1&pid=ImgDetMain",
-        "coin_total": 0.12460703,
-        "coin_slug": "ETH"
-    },
-    {
-        "id": 4,
         "name": "Floki",
         "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
         "coin_total": 1158914.82,
         "coin_slug": "FLOKI"
     },
     {
-        "id": 5,
+        "id": 4,
         "name": "TOKENFI",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
         "coin_total": 1360.324639,
         "coin_slug": "TOKEN"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Manta",
         "img": "https://seeklogo.com/images/M/manta-network-manta-logo-D595CAF1F9-seeklogo.com.png",
         "coin_total": 54.042438,
