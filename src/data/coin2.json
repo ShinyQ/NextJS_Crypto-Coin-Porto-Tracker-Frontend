@@ -3,14 +3,14 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.08596646,
+        "coin_total":  0.0912415,
         "coin_slug": "BTC"
     },
     {
         "id": 2,
         "name": "APU",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/30008.png",
-        "coin_total": 27076205.828,
+        "coin_total": 26104332.49226,
         "coin_slug": "APU"
     },
     {
@@ -26,12 +26,5 @@
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
         "coin_total": 1360.324639,
         "coin_slug": "TOKEN"
-    },
-    {
-        "id": 5,
-        "name": "Manta",
-        "img": "https://seeklogo.com/images/M/manta-network-manta-logo-D595CAF1F9-seeklogo.com.png",
-        "coin_total": 54.042438,
-        "coin_slug": "MANTA"
     }
 ]
