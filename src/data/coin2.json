@@ -3,14 +3,14 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.08,
+        "coin_total":  0.075,
         "coin_slug": "BTC"
     },
     {
         "id": 2,
         "name": "APU",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/30008.png",
-        "coin_total": 28592341.780925,
+        "coin_total": 28093035.146335,
         "coin_slug": "APU"
     },
     {
