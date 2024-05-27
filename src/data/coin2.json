@@ -3,14 +3,14 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.075,
+        "coin_total":  0.06,
         "coin_slug": "BTC"
     },
     {
         "id": 2,
         "name": "APU",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/30008.png",
-        "coin_total": 29093035.146335,
+        "coin_total": 30350729.323205,
         "coin_slug": "APU"
     },
     {
@@ -24,7 +24,7 @@
         "id": 4,
         "name": "TOKENFI",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
-        "coin_total": 1360.324639,
+        "coin_total": 1493.494639,
         "coin_slug": "TOKEN"
     }
 ]
