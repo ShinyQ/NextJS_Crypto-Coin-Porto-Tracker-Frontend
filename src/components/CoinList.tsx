@@ -104,7 +104,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                   style={{
                     color: parseFloat(calculateROI(startPortofolio, totalPortofolio)) >= 0
                       ? "#16a34a"
-                      : "#ef4444", // Hijau jika untung, merah jika rugi
+                      : "#ef4444", 
                   }}
                 >
                   {calculateROI(startPortofolio, totalPortofolio)}%
@@ -113,7 +113,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
 
               <tr className="border-b">
                 <td className="py-1 px-2 text-gray-700">Portofolio Saat Ini</td>
-                <td className="py-1 px-2 text-gray-800">{formatToRupiah(totalPortofolio)}</td>
+                <td className="py-1 px-2 text-gray-800 font-bold">{formatToRupiah(totalPortofolio)}</td>
               </tr>
 
               <tr className="border-b">
