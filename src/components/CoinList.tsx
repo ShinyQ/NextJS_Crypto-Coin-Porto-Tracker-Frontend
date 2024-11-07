@@ -113,7 +113,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
 
               <tr className="border-b">
                 <td className="py-1 px-2 text-gray-700">Portofolio Saat Ini</td>
-                <td className="py-1 px-2 text-gray-800 font-bold">{formatToRupiah(totalPortofolio)}</td>
+                <td className="py-1 px-2 text-gray-800 font-bold text-yellow-500">{formatToRupiah(totalPortofolio)}</td>
               </tr>
 
               <tr className="border-b">
