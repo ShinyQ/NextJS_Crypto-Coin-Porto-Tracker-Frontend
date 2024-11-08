@@ -72,7 +72,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
 
   return (
     <div className="p-2 mx-5">
-      <div className="flex items-center justify-center p-5">
+      <div className="flex items-center justify-center p-5 ">
         <div className="p-5 bg-white rounded-lg shadow-lg">
           <table className="min-w-full table-auto">
             <thead>
@@ -129,14 +129,14 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
             </tbody>
           </table>
 
-          <div className="mt-5 text-center">
+          {/* <div className="mt-5 text-center">
             <button
               className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-5 rounded-full transition-colors duration-300"
               onClick={() => setShowValue(!showValue)}
             >
               {showValue ? "👀 Lihat" : "😣 Sembunyikan"}
             </button>
-          </div>
+          </div> */}
         </div>
       </div> 
 

@@ -6,9 +6,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center">
       <h3 className="font-bold text-2xl my-3 pt-3">Crypto Portofolio Tracker</h3>
       <p className="mb-3">
-        Made by <a className="font-bold" style={{ color: "green" }} href="https://github.com/ShinyQ" target="_blank">@ShinyQ</a> Powered by CoinMarketCap
+        Made by <a className="font-bold" style={{ color: "lightblue" }} href="https://github.com/ShinyQ" target="_blank">@ShinyQ</a> Powered by <a className="font-bold" style={{ color: "lightblue" }} href="https://coinmarketcap.com/api/" target="_blank">  @CoinMarketCap </a> 
       </p>
-      <CoinList data={coin} startPortofolio={65000000} />
+      <CoinList data={coin} startPortofolio={95000000} />
     </main>
   );
 }
