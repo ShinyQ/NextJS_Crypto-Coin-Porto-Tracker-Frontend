@@ -8,7 +8,7 @@ export default function Home() {
       <p className="mb-3">
         Made by <a className="font-bold" style={{ color: "lightblue" }} href="https://github.com/ShinyQ" target="_blank">@ShinyQ</a> Powered by <a className="font-bold" style={{ color: "lightblue" }} href="https://coinmarketcap.com/api/" target="_blank">  @CoinMarketCap </a> 
       </p>
-      <CoinList data={coin} startPortofolio={10000000} />
+      <CoinList data={coin} startPortofolio={100000000} />
     </main>
   );
 }
