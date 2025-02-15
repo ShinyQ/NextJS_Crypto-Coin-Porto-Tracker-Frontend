@@ -169,7 +169,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                   Harga Saat Ini: {formatToDollar(coin.quote?.USD?.price)}
                 </p>
                 <p className="text-gray-700 text-base mt-5 font-bold">
-                  Nilai Jual (Rp):{" "} 
+                  Nilai Jual (Rp):{" "} <br />
                   {renderValue(formatCoinValue(coin, coinData.indexOf(coin)), showValue)}
                 </p>
                 <p className="text-gray-700 text-base font-bold mt-3">
