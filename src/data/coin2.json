@@ -8,13 +8,20 @@
     },
     {
         "id": 2,
+        "name": "Bitget Token",
+        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/11092.png",
+        "coin_total": 210,
+        "coin_slug": "BGB"
+    }
+    {
+        "id": 3,
         "name": "Floki",
         "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
         "coin_total": 1158914.82,
         "coin_slug": "FLOKI"
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "TOKENFI",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
         "coin_total": 1493.494639,
