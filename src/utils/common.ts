@@ -11,8 +11,8 @@ export function formatToDollar(number: number): string {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    minimumFractionDigits: 7,
-    maximumFractionDigits: 7,
+    minimumFractionDigits: 6,
+    maximumFractionDigits: 6,
   }).format(number)
 }
 

@@ -166,7 +166,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                   )}
                 </p>
                 <p className="text-gray-700 text-base">
-                  Harga Saat Ini: {formatToDollar(coin.quote?.USD?.price)}
+                  Harga Sekarang: {formatToDollar(coin.quote?.USD?.price)}
                 </p>
                 <p className="text-gray-700 text-base mt-5 font-bold">
                   Nilai Jual (Rp):{" "} <br />
