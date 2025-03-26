@@ -159,7 +159,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
                   </div>
                 </div>
                 <p className="text-gray-700 text-base">
-                  Jumlah Koin:{" "}
+                  Jumlah:{" "}
                   {renderValue(
                     formatTotalCoin(data[coinData.indexOf(coin)].coin_total),
                     showValue

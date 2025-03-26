@@ -3,21 +3,7 @@
         "id": 1,
         "name": "APU",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/30008.png",
-        "coin_total": 62078020,
+        "coin_total": 63162521,
         "coin_slug": "APU"
-    },
-    {
-        "id": 2,
-        "name": "Floki",
-        "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
-        "coin_total": 1158914.82,
-        "coin_slug": "FLOKI"
-    },
-    {
-        "id": 3,
-        "name": "TOKENFI",
-        "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/28299.png",
-        "coin_total": 1493.494639,
-        "coin_slug": "TOKEN"
     }
 ]
