@@ -53,7 +53,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortofolio: number }> = ({
   if (error) return <div>Error: {error}</div>;
 
   const totalPortofolio = calculateTotalPortfolio(coinData, data);
-  const totalReturn = calculateTotalReturn(coinData);
+  const totalReturn = calculateTotalReturn(coinData, data);
 
   const formatCoinValue = (coin: MarketCapData, index: number) => {
     const value = coin.quote?.USD?.price * data[index].coin_total * RUPIAH_AMOUNT;

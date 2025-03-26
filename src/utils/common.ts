@@ -21,8 +21,12 @@ export function calculateROI(startPortofolio: number, totalPortofolio: number): 
   return roi.toFixed(2);
 }
 
-export function calculateTotalReturn(coinData: (Coin & MarketCapData)[]): string {
-  const totalReturn = coinData.reduce((acc, coin) => acc + (coin.quote?.USD?.percent_change_24h ?? 0), 0);
+export function calculateTotalReturn(coinData: (Coin & MarketCapData)[], data: Coin[]): string {
+  const totalReturn = coinData.reduce((acc, coin, index) => {
+    const change = (data[index]?.coin_total !== 0) ? (coin.quote?.USD?.percent_change_24h ?? 0) : 0;
+    return acc + change;
+  }, 0);
+  
   return totalReturn.toFixed(2);
 }
 
@@ -33,7 +37,6 @@ export function calculateTotalPortfolio(coinData: (Coin & MarketCapData)[], data
     return acc + value;
   }, 0);
 }
-
 
 export function formatTotalCoin(totalCoin: number){
   const formattedNumber = totalCoin.toLocaleString('de-DE', {
