@@ -12,6 +12,7 @@ import {
 import { fetchCoinData } from "@/service/api/marketCapService";
 import { Coin, MarketCapData } from "@/types/coin";
 import { RUPIAH_AMOUNT } from "@/utils/constant";
+import Image from "next/image";
 
 const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
   data,
@@ -156,10 +157,12 @@ const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-4">
                     <div className="flex-shrink-0">
-                      <img
-                        className="w-12 h-12 rounded-full"
+                      <Image
+                        className="rounded-full"
                         src={data[coinData.indexOf(coin)].img}
                         alt={data[coinData.indexOf(coin)].name}
+                        width={48}
+                        height={48}
                       />
                     </div>
                     <div>
