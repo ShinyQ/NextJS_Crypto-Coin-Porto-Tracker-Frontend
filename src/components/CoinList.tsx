@@ -88,7 +88,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
               </div>
               <div className="space-y-1">
                 <p className="text-sm font-medium text-muted-foreground">Modal Investasi</p>
-                <p className="text-xl font-semibold text-card-foreground">{formatToRupiah(startPortfolio)}</p>
+                <p className="text-l font-semibold text-card-foreground">{formatToRupiah(startPortfolio)}</p>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
               </div>
               <div className="space-y-1">
                 <p className="text-sm font-medium text-muted-foreground">Total Keuntungan</p>
-                <p className={`text-xl font-semibold ${totalPortfolio - startPortfolio >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                <p className={`text-l font-semibold ${totalPortfolio - startPortfolio >= 0 ? 'text-green-500' : 'text-red-500'}`}>
                   {formatToRupiah(totalPortfolio - startPortfolio)}
                 </p>
               </div>
@@ -124,7 +124,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
               </div>
               <div className="space-y-1">
                 <p className="text-sm font-medium text-muted-foreground">Persentase Keseluruhan</p>
-                <p className={`text-xl font-semibold ${parseFloat(calculateROI(startPortfolio, totalPortfolio)) >= 0 ? 'text-green-500' : 'text-red-500'}`}>
+                <p className={`text-l font-semibold ${parseFloat(calculateROI(startPortfolio, totalPortfolio)) >= 0 ? 'text-green-500' : 'text-red-500'}`}>
                   {calculateROI(startPortfolio, totalPortfolio)}%
                 </p>
               </div>
@@ -143,7 +143,7 @@ const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
               </div>
               <div className="space-y-1">
                 <p className="text-sm font-medium text-muted-foreground">Portfolio Saat Ini</p>
-                <p className="text-xl font-semibold text-yellow-500">{formatToRupiah(totalPortfolio)}</p>
+                <p className="text-l font-semibold text-yellow-500">{formatToRupiah(totalPortfolio)}</p>
               </div>
             </div>
           </div>
@@ -184,9 +184,9 @@ const CoinList: React.FC<{ data: Coin[]; startPortfolio: number }> = ({
 
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">Jumlah</span>
+                    <span className="text-sm text-muted-foreground">Jumlah Koin</span>
                     <span className="text-sm font-medium text-card-foreground">
-                      Rp{renderValue(formatTotalCoin(data[coinData.indexOf(coin)].coin_total), showValue)}
+                      {renderValue(formatTotalCoin(data[coinData.indexOf(coin)].coin_total), showValue)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
