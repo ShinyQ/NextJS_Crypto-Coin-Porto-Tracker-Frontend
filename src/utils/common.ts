@@ -16,8 +16,8 @@ export function formatToDollar(number: number): string {
   }).format(number)
 }
 
-export function calculateROI(startPortofolio: number, totalPortofolio: number): string {
-  const roi = (((totalPortofolio - startPortofolio) / startPortofolio) * 100);
+export function calculateROI(startPortfolio: number, totalPortfolio: number): string {
+  const roi = (((totalPortfolio - startPortfolio) / startPortfolio) * 100);
   return roi.toFixed(2);
 }
 
