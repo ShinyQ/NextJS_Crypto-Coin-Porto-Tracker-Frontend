@@ -1,6 +1,6 @@
 # Cryptocurrency Portfolio Tracker
 
-Modern cryptocurrency portfolio tracking application built with Next.js 15 and TypeScript. This application provides a monitoring cryptocurrency investments and tracking portfolio performance.
+Cryptocurrency portfolio tracking application built with Next.js 15 and TypeScript. This application provides a monitoring cryptocurrency investments and tracking portfolio performance.
 
 ## Features
 
