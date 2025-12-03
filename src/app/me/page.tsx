@@ -1,4 +1,4 @@
-import coin from "@/data/coin2.json";
+import coin from "@/data/coin3.json";
 import CoinList from "@/components/CoinList";
 import Link from "next/link";
 

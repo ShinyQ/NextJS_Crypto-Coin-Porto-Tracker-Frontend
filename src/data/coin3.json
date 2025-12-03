@@ -3,53 +3,46 @@
         "id": 1,
         "name": "Bitcoin",
         "img": "https://logodownload.org/wp-content/uploads/2017/06/bitcoin-logo-1-1.png",
-        "coin_total":  0.20438446,
+        "coin_total":  0.25438446,
         "coin_slug": "BTC"
     },
     {
         "id": 2,
         "name": "APU",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/30008.png",
-        "coin_total":  90686065,
+        "coin_total":  50686065,
         "coin_slug": "APU"
     },
     {
         "id": 3,
         "name": "Ethereum",
         "img": "https://th.bing.com/th/id/OIP.Hfv17gmiIFkSqmIM9_3p-QHaIX?rs=1&pid=ImgDetMain",
-        "coin_total": 3.62460703,
+        "coin_total": 3.82460703,
         "coin_slug": "ETH"
     },
     {
         "id": 4,
-        "name": "Floki",
-        "img": "https://th.bing.com/th/id/OIP.XNvqmhH7J1TWcFqAPv8XkAHaHa?rs=1&pid=ImgDetMain",
-        "coin_total": 1758914.82,
-        "coin_slug": "FLOKI"
-    },
-    {
-        "id": 5,
         "name": "Solana",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/5426.png",
-        "coin_total": 35.23,
+        "coin_total": 36.23,
         "coin_slug": "SOL"
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Bitget Token",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/11092.png",
         "coin_total": 1462.45,
         "coin_slug": "BGB"
     },
     {
-        "id": 7,
+        "id": 6,
         "name": "Hyperliquid",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/32196.png",
-        "coin_total": 230,
+        "coin_total": 426.8,
         "coin_slug": "HYPE"
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "XRP",
         "img": "https://s2.coinmarketcap.com/static/img/coins/64x64/52.png",
         "coin_total": 482.12,
